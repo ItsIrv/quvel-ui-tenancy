@@ -1,0 +1,57 @@
+{
+  "name": "@quvel-kit/tenancy",
+  "version": "1.1.1",
+  "description": "Multi-tenant types and utilities for Quvel UI",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "types": "./dist/types.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils.js",
+      "types": "./dist/utils.d.ts"
+    },
+    "./augment-core": {
+      "import": "./augment-core.js",
+      "types": "./augment-core.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "augment-core.d.ts",
+    "augment-core.js",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "quasar",
+    "multi-tenant",
+    "tenancy",
+    "configuration"
+  ],
+  "author": "Irving Gomez <gomirv.work@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "@quvel-kit/core": "^1.1.0",
+    "@quvel-kit/ssr": "^1.1.0"
+  },
+  "devDependencies": {
+    "@quvel-kit/core": "*",
+    "@quvel-kit/ssr": "*",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
